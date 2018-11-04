@@ -1,4 +1,4 @@
-# netlify_deployment
+# Netlify Tests
 
 Testing Netlify CD for a simple static site.
 
