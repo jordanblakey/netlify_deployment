@@ -24,10 +24,10 @@ netlify deploy --prod
 [build]
   base    = ""
   publish = "/build"
-  command = "yarn run build"
+  command = "npm run build"
 
 [context.production]
-  command = "make production"
+  command = "yarn run build"
   [context.production.environment]
     ACCESS_TOKEN = "super secret"
 
