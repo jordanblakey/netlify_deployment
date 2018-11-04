@@ -3,6 +3,11 @@
   publish = "/build"
   command = "npm run build;"
 
+[context.master]
+  command = "echo $ACCESS_TOKEN; yarn run build;"
+[context.master.environment]
+  ACCESS_TOKEN = "PRODUCTION ACCESS TOKEN"
+
 [context.staging]
   command = "echo $ACCESS_TOKEN; yarn run build;"
 [context.staging.environment]
