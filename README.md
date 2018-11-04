@@ -28,8 +28,9 @@ netlify deploy --prod
 
 [context.production]
   command = "yarn run build"
-  [context.production.environment]
-    ACCESS_TOKEN = "super secret"
+
+[context.production.environment]
+  ACCESS_TOKEN = "super secret"
 
 [context.deploy-preview.environment]
   ACCESS_TOKEN = "not so secret"

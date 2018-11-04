@@ -2,3 +2,6 @@
   base    = ""
   publish = "/build"
   command = "npm run build"
+
+[context.staging]
+  command = "npm run build; curl -X POST -d '' https://api.netlify.com/build_hooks/5bdf5dc6b312744aa8344c6f"
