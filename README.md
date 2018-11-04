@@ -28,9 +28,13 @@ netlify deploy --prod
 
 [context.production]
   command = "yarn run build"
-
 [context.production.environment]
   ACCESS_TOKEN = "super secret"
+
+[context.staging]
+command = "echo $ACCESS_TOKEN; yarn run build;"
+[context.staging.environment]
+  ACCESS_TOKEN = "NKqwV6ztp7ms5yHc3HJ@"
 
 [context.deploy-preview.environment]
   ACCESS_TOKEN = "not so secret"
