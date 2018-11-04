@@ -22,9 +22,9 @@ netlify deploy --prod
 
 ``` sh
 [build]
-  base    = "site"
-  publish = "public"
-  command = "make"
+  base    = ""
+  publish = "/build"
+  command = "yarn run build"
 
 [context.production]
   command = "make production"
