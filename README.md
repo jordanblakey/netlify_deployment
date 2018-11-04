@@ -5,9 +5,18 @@ Testing Netlify CD for a simple static site.
 ## Project Setup
 
 * Create a repository
-* Add the repository to Netlify for CD
+* Use netlify CLI tool to deploy any folder OR
+* Add the repository to Netlify for CI
 * Add any build scripts and a dist directory
 * To set environment variables and contexts, use a netlify.toml:
+
+## CLI Commands
+
+```sh
+netlify
+netlify deploy
+netlify deploy --prod
+```
 
 ### netlify.toml
 
