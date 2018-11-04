@@ -1,4 +1,9 @@
 [build]
   base    = ""
   publish = "/build"
-  command = "npm run build"
+  command = "npm run build;"
+
+[context.staging]
+  command = "echo $ACCESS_TOKEN; yarn run build;"
+[context.staging.environment]
+  ACCESS_TOKEN = "NKqwV6ztp7ms5yHc3HJ@"
