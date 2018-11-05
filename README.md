@@ -13,9 +13,16 @@ Testing Netlify CD for a simple static site.
 ## CLI Commands
 
 ```sh
-netlify
-netlify deploy
-netlify deploy --prod
+netlify # Show all commands
+login   # Login to your Netlify account
+status  # Print status information
+sites   # Handle various site operations
+init    # Configure continuous deployment for a new or existing site
+link    # Link a local repo or project folder to an existing site on Netlify
+unlink  # Unlink a local folder from a Netlify site
+open    # Open settings for the site linked to the current folder
+deploy  # Create a new deploy from the contents of a folder
+watch   # Watch for site deploy to finish
 ```
 
 ### netlify.toml
@@ -44,13 +51,5 @@ netlify deploy --prod
   command = "echo $ACCESS_TOKEN; yarn run build;"
   ACCESS_TOKEN = "I'M A BRANCH BUILD TRIGGERED BY A DEPLOY HOOK"
 
-[context.feature]
-  command = "echo $ACCESS_TOKEN $FEATURE_KEY; yarn run build;"
-  FEATURE_KEY = "I'M A BUILD TRIGGERED FOR A SPECIFIC BRANCH"
-
-[context."feature/branch"]
-  command = "echo $ACCESS_TOKEN; yarn run build;"
-  ACCESS_TOKEN = "I'M A BUILD TRIGGERED FOR A FEATURE BRANCH"
-```
 
 ### Environment Variables
