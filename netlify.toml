@@ -13,8 +13,9 @@
 # [context.staging.environment]
 #   ACCESS_TOKEN = "I'M THE STAGING BRANCH"
 
-[context.deploy-preview.environment]
+[context.deploy-preview]
   command = "echo $ACCESS_TOKEN; npm run build;"
+[context.deploy-preview.environment]
   ACCESS_TOKEN = "I'M A PULL REQUEST TO MASTER"
 
 [context.branch-deploy]
