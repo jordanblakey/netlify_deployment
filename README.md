@@ -34,21 +34,21 @@ watch   # Watch for site deploy to finish
   command = "npm run build"
 
 [context.master]
-  command = "echo $ACCESS_TOKEN; yarn run build;"
+  command = "echo $ACCESS_TOKEN; npm run build;"
 [context.master.environment]
   ACCESS_TOKEN = "I'M IN PRODUCTION"
 
 [context.deploy-preview.environment]
-  command = "echo $ACCESS_TOKEN; yarn run build;"
+  command = "echo $ACCESS_TOKEN; npm run build;"
   ACCESS_TOKEN = "I'M A PULL REQUEST TO MASTER"
 
 [context.staging]
-  command = "echo $ACCESS_TOKEN; yarn run build;"
+  command = "echo $ACCESS_TOKEN; npm run build;"
 [context.staging.environment]
   ACCESS_TOKEN = "I'M THE STAGING BRANCH"
 
 [context.branch-deploy]
-  command = "echo $ACCESS_TOKEN; yarn run build;"
+  command = "echo $ACCESS_TOKEN; npm run build;"
   ACCESS_TOKEN = "I'M A BRANCH BUILD TRIGGERED BY A DEPLOY HOOK"
 
 
