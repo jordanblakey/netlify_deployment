@@ -1,7 +1,7 @@
 # Netlify Tests
 
 Testing Netlify CD for a simple static site.
-
+ 
 ## Project Setup
 
 * Create a repository
