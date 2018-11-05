@@ -48,7 +48,7 @@ netlify deploy --prod
   command = "echo $ACCESS_TOKEN $FEATURE_KEY; yarn run build;"
   FEATURE_KEY = "I'M A BUILD TRIGGERED FOR A SPECIFIC BRANCH"
 
-[context."features/branch"]
+[context."feature/branch"]
   command = "echo $ACCESS_TOKEN; yarn run build;"
   ACCESS_TOKEN = "I'M A BUILD TRIGGERED FOR A FEATURE BRANCH"
 ```
