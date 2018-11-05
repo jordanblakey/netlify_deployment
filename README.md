@@ -1,9 +1,9 @@
 # Netlify Tests
 
 Testing Netlify CD for a simple static site.
-
+ 
 ## Project Setup
-
+ 
 * Create a repository
 * Use netlify CLI tool to deploy any folder OR
 * Add the repository to Netlify for CI
