@@ -8,10 +8,10 @@
 [context.master.environment]
   ACCESS_TOKEN = "I'M IN PRODUCTION"
 
-[context.staging]
-  command = "echo $ACCESS_TOKEN; npm run build;"
-[context.staging.environment]
-  ACCESS_TOKEN = "I'M THE STAGING BRANCH"
+# [context.staging]
+#   command = "echo $ACCESS_TOKEN; npm run build;"
+# [context.staging.environment]
+#   ACCESS_TOKEN = "I'M THE STAGING BRANCH"
 
 [context.deploy-preview.environment]
   command = "echo $ACCESS_TOKEN; npm run build;"
