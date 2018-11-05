@@ -26,27 +26,31 @@ netlify deploy --prod
   publish = "/build"
   command = "npm run build"
 
-[context.production]
-  command = "yarn run build"
-[context.production.environment]
-  ACCESS_TOKEN = "super secret"
-
-[context.staging]
-command = "echo $ACCESS_TOKEN; yarn run build;"
-[context.staging.environment]
-  ACCESS_TOKEN = "NKqwV6ztp7ms5yHc3HJ@"
+[context.master]
+  command = "echo $ACCESS_TOKEN; yarn run build;"
+[context.master.environment]
+  ACCESS_TOKEN = "I'M IN PRODUCTION"
 
 [context.deploy-preview.environment]
-  ACCESS_TOKEN = "not so secret"
+  command = "echo $ACCESS_TOKEN; yarn run build;"
+  ACCESS_TOKEN = "I'M A PULL REQUEST TO MASTER"
+
+[context.staging]
+  command = "echo $ACCESS_TOKEN; yarn run build;"
+[context.staging.environment]
+  ACCESS_TOKEN = "I'M THE STAGING BRANCH"
 
 [context.branch-deploy]
-  command = "make staging"
+  command = "echo $ACCESS_TOKEN; yarn run build;"
+  ACCESS_TOKEN = "I'M A BRANCH BUILD TRIGGERED BY A DEPLOY HOOK"
 
 [context.feature]
-  command = "make feature"
+  command = "echo $ACCESS_TOKEN $FEATURE_KEY; yarn run build;"
+  FEATURE_KEY = "I'M A BUILD TRIGGERED FOR A SPECIFIC BRANCH"
 
 [context."features/branch"]
-  command = "gulp"
+  command = "echo $ACCESS_TOKEN; yarn run build;"
+  ACCESS_TOKEN = "I'M A BUILD TRIGGERED FOR A FEATURE BRANCH"
 ```
 
 ### Environment Variables
