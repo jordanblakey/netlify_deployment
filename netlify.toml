@@ -19,4 +19,5 @@
 
 [context.branch-deploy]
   command = "echo $ACCESS_TOKEN; npm run build;"
+[context.branch-deploy.environment]
   ACCESS_TOKEN = "I'M A BRANCH BUILD TRIGGERED BY A DEPLOY HOOK"
